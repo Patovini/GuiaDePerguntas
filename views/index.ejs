@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+<body>
+    <%- include('partials/navbar.ejs') %>
+
+    <div class="container">
+        <hr>
+        <h1>PERGUNTAS</h1>
+        <br>
+        <h5>clique abaixo caso tenha uma pergunta</h5>
+        <br>
+        <a href="/perguntas" class="btn btn-success">perguntar?</a>
+        <br><br>
+        <!-- forEach dentro do bd procurando o titulo  -->
+        <% perguntass.forEach(function(pergunta){ %>
+            <br>
+            <!-- card e ferramenta do bootstrap -->
+            <div class="card"> 
+                <div class="card-body">
+                    <p><%= pergunta.titulo %></p>
+                </div>
+                <div class="card-footer">
+                <a href="/perg/<%= pergunta.id %>"><button class="btn btn-success">responder</button></a>
+                </div>
+                <!-- <p><%= pergunta.descricao %></p> -->
+            </div>
+
+        <% })%>
+    </div>
+
+</body>
+<%- include('partials/footer.ejs') %>
+
+  

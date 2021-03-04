@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<body>
+    <%- include('partials/navbar') %>
+<div class="container"> 
+    <div class="card" id="formularioPerg"> <!-- id deixa unico pra ser usado com css-->
+        <div class="card-header">
+            <h3>Realizar perguntas</h3>
+        </div>    
+        <div class="card-header">
+            <form method="POST" action="/salvarpergunta">
+                <label>Titulo</label>
+                    <input type="text" placeholder="Titulo" class="form-control" name="titulo1">
+                    <br><label>Descrição</label>
+                    <textarea placeholder="Descreva sua pergunta" class="form-control" name="descricao1"></textarea>
+                    <br>
+                    <button class="btn btn-success">Confirme</button>
+                </form>
+            </div>
+        </div>
+    
+    </div>
+</body>
+<%- include('partials/footer') %>
+  
